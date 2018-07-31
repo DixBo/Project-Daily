@@ -12,27 +12,65 @@
         margin: 0px;
     }
     .navBar-Wrapper {
-        display: grid;
-        grid-template-columns: repeat(8, 1fr);
-        grid-template-rows: 1fr;
         background-color: white;
+        box-shadow: 0 2px 15px 0 rgba(0,0,0,0.09);
+        margin: 0px;
+        padding: 0px;
+        overflow: hidden;
     }
 
-    .dailyLogoNav {
-        width: 50px;
+    .navBar-Wrapper li {
+        float: left;
+       
     }
 
-    /* .mainsection {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(9, 2fr) 1fr; 
-        width: 50%;
+    .navBar-Wrapper a {
+        display: block;
+        text-align: center;
+        padding-right: 24px;
+        height: 36px;
+        text-decoration: none;
+        color: #6B6B6B;
+    }
+
+    .logoNav img{
+        width: 30px;
+        height: auto;
+    }
+
+    .logoNav {
+        padding-top: 27px;
+        padding-bottom: 23px;
+        padding-left: 24px; 
+    }
+
+    .push {
+        padding-top: 30px;
+        padding-bottom: 20px;
+    }
+
+    /* .login {
         margin: auto;
-        margin-top: 25px; 
-        background-color: white;
-        padding: 40px;
-        grid-gap: 10px;  
+    }
+
+    .register {
+        margin: auto;
     } */
+
+    input {
+        border-radius: 100px;
+        width: 246.39px;
+        text-align: center;
+        height: 36px;
+    }
+
+    .searchBar {
+        margin: 20px;
+    }
+
+    .right {
+        float: right;
+    }
 
     .mainsection {
         display: grid;
@@ -43,6 +81,7 @@
         grid-row-gap: 35px;
         margin-top: 25px;
         padding: 5%;
+        box-shadow: 0 2px 15px 0 rgba(0,0,0,0.09);
     }
 
     .group {
@@ -58,28 +97,50 @@
         width: 100%;
         height: auto;
     }
+
+    .title a{
+        text-decoration: none;
+    }
+
+    h2 {
+        font-size: 18px;
+        color: #1A1A1A;
+        font-weight: 700;
+    }
+
+    .bodyList a {
+        text-decoration: none;
+    }
+
+    h3 {
+        color: #007AFF;
+    }
 </style>
 <body>
     <div class="DailySmarty-Wrapper">
-        <div class="navBar-Wrapper">
-            <a href="#" class="logoNav"><img src="images/ds_circle_logo.png" alt="" class="dailyLogoNav"></a>
-            <a href="#" class="feedNav"><i class="fas fa-bars"></i> Feed</a>
-            <a href="#" class="topicNav"><i class="fas fa-layer-group"></i> Topics</a>
-            <a href="#" class="userNav"><i class="fas fa-user-friends"></i> Users</a>
-            <a href="#" class="postNav"><i class="far fa-file-alt"></i> Posts</a>
-            <a href="#" class="login"><i class="fas fa-user-friends"></i> Login</a>
-            <a href="#" class="register"><i class="fas fa-user-friends"></i> Register</a>
-            <input type="text" placeholder="What do you want to learn today?" class="searchBar">
-        </div>
+        <ul class="navBar-Wrapper">
+            <!-- <div class="left"> -->
+               <li><a href="#" class="logoNav"><img src="http://www.dailysmarty.com/assets/nav_logo-7d8878ca2f95f6ba8fd06eb950f36064ce223fd629cd826b81c7b3dd94355ea9.png" alt="" ></a></li>
+                <li><a href="#" class="feedNav push"><i class="fas fa-bars"></i> Feed</a></li>
+                <li><a href="#" class="topicNav push"><i class="fas fa-layer-group"></i> Topics</a></li>
+                <li><a href="#" class="userNav push"><i class="fas fa-user-friends"></i> Users</a></li>
+                <li><a href="#" class="postNav push"><i class="far fa-file-alt"></i> Posts</a></li>
+            <!-- </div> -->
+            <div class="right">
+                <li><a href="#" class="login push"><i class="fas fa-user-friends"></i> Login</a></li>
+                <li><a href="#" class="register push"><i class="fas fa-user-friends"></i> Register</a></li>
+                <li><a><input type="text" placeholder="What do you want to learn today?" class="searchBar"></a></li>
+            </div>
+        </ul>
         <div class="mainsection">
             <div class="group">
                 <img src="https://dailysmarty-production.s3.amazonaws.com/uploads/post/img/513/active-storage.jpg" alt="" class="img1 imgtop">
                 <div class="list1">
                     <ul>
-                        <li class="title"><a href="#">Steps for Using Active Storage to Upload Files to S3 with Ruby on Rails</a></li>
-                        <li class="bodyList"><a href="#">Ruby on Rails</a></li>
-                        <li class="bodyList"><a href="#">AWS</a></li>
-                        <li class="bodyList"><a href="#">ActiveStorage</a></li>
+                        <li class="title"><a href="#"><h2>Steps for Using Active Storage to Upload Files to S3 with Ruby on Rails</h2></a></li>
+                        <li class="bodyList"><a href="#"><h3>Ruby on Rails</h3></a></li>
+                        <li class="bodyList"><a href="#"><h3>AWS</h3></a></li>
+                        <li class="bodyList"><a href="#"><h3>ActiveStorage</h3></a></li>
                     </ul>
                 </div>
             </div>
@@ -88,8 +149,8 @@
                 <img src="https://dailysmarty-production.s3.amazonaws.com/uploads/post/img/509/heroku-logo.jpg" alt="" class="img1">
                 <div class="list2">
                     <ul>
-                        <li class="title"><a href="#">How to Add a Heroku Remote to an Existing Project</a></li>
-                        <li class="bodyList"><a href="#">Heroku</a></li>
+                        <li class="title"><a href="#"><h2>How to Add a Heroku Remote to an Existing Project</h2></a></li>
+                        <li class="bodyList"><a href="#"><h3>Heroku</h3></a></li>
                     </ul>
                 </div>
             </div>
@@ -98,9 +159,9 @@
                 <img src="https://dailysmarty-production.s3.amazonaws.com/uploads/post/img/483/rails-encrypted-credentials.jpg" alt="" class="img1">
                 <div class="list3">
                     <ul>
-                        <li class="title"><a href="#">Cheat Sheet for Working with Rails Encrypted Credentials</a></li>
-                        <li class="bodyList"><a href="#">Ruby on Rails</a></li>
-                        <li class="bodyList"><a href="#">Environment Variables</a></li>
+                        <li class="title"><a href="#"><h2>Cheat Sheet for Working with Rails Encrypted Credentials</h2></a></li>
+                        <li class="bodyList"><a href="#"><h3>Ruby on Rails</h3></a></li>
+                        <li class="bodyList"><a href="#"><h3>Environment Variables</h3></a></li>
                     </ul>
                 </div>
             </div>
@@ -109,9 +170,9 @@
                 <img src="https://dailysmarty-production.s3.amazonaws.com/uploads/post/img/479/authentication.png" alt="" class="img1">
                 <div class="list4">
                     <ul>
-                        <li class="title"><a href="#">Recipe for Adding Authentication to a Rails API Only Application with an HTTP Only Cookie</a></li>
-                        <li class="bodyList"><a href="#">Authentication</a></li>
-                        <li class="bodyList"><a href="#">API</a></li>
+                        <li class="title"><a href="#"><h2>Recipe for Adding Authentication to a Rails API Only Application with an HTTP Only Cookie</h2></a></li>
+                        <li class="bodyList"><a href="#"><h3>Authentication</h3></a></li>
+                        <li class="bodyList"><a href="#"><h3>API</h3></a></li>
                     </ul>
                 </div>
             </div>
@@ -120,11 +181,11 @@
                 <img src="https://dailysmarty-production.s3.amazonaws.com/uploads/post/img/478/search.png" alt="" class="img1">
                 <div class="list5">
                     <ul>
-                        <li class="title"><a href="#">How to Add Search Functionality Into a Rails API Application</a></li>
-                        <li class="bodyList"><a href="#">Ruby on Rails</a></li>
-                        <li class="bodyList"><a href="#">Postgres</a></li>
-                        <li class="bodyList"><a href="#">API Development</a></li>
-                        <li class="bodyList"><a href="#">API</a></li>
+                        <li class="title"><a href="#"><h2>How to Add Search Functionality Into a Rails API Application</h2></a></li>
+                        <li class="bodyList"><a href="#"><h3>Ruby on Rails</h3></a></li>
+                        <li class="bodyList"><a href="#"><h3>Postgres</h3></a></li>
+                        <li class="bodyList"><a href="#"><h3>API Development</h3></a></li>
+                        <li class="bodyList"><a href="#"><h3>API</h3></a></li>
                     </ul>
                 </div>
             </div>
@@ -133,11 +194,11 @@
                 <img src="https://dailysmarty-production.s3.amazonaws.com/uploads/post/img/476/Screen_Shot_2018-05-21_at_4.47.16_PM.png" alt="" class="img1">
                 <div class="list6">
                     <ul>
-                        <li class="title"><a href="#">Promises (A visual break down)</a></li>
-                        <li class="bodyList"><a href="#">API Development</a></li>
-                        <li class="bodyList"><a href="#">API</a></li>
-                        <li class="bodyList"><a href="#">Promises</a></li>
-                        <li class="bodyList"><a href="#">JavaScript</a></li>
+                        <li class="title"><a href="#"><h2>Promises (A visual break down)</h2></a></li>
+                        <li class="bodyList"><a href="#"><h3>API Development</h3></a></li>
+                        <li class="bodyList"><a href="#"><h3>API</h3></a></li>
+                        <li class="bodyList"><a href="#"><h3>Promises</h3></a></li>
+                        <li class="bodyList"><a href="#"><h3>JavaScript</h3></a></li>
                     </ul>
                 </div>
             </div>
@@ -146,8 +207,8 @@
                 <img src="https://dailysmarty-production.s3.amazonaws.com/uploads/post/img/463/ProblemSolving_Banner_1920x1080.jpg" alt="" class="img1">
                 <div class="list7">
                     <ul>
-                        <li class="title"><a href="#">How to Add Rails Console Helper Methods</a></li>
-                        <li class="bodyList"><a href="#">Ruby on Rails</a></li>
+                        <li class="title"><a href="#"><h2>How to Add Rails Console Helper Methods</h2></a></li>
+                        <li class="bodyList"><a href="#"><h3>Ruby on Rails</h3></a></li>
                     </ul>
                 </div>
             </div>
@@ -156,12 +217,12 @@
                 <img src="https://dailysmarty-production.s3.amazonaws.com/uploads/post/img/452/jquery-rails.jpg" alt="" class="img1">
                 <div class="list8">
                     <ul>
-                        <li class="title"><a href="#">How to Use jQuery in Rails 5.1+ with Yarn and Webpack</a></li>
-                        <li class="bodyList"><a href="#">Ruby on Rails</a></li>
-                        <li class="bodyList"><a href="#">Coding</a></li>
-                        <li class="bodyList"><a href="#">Tutorial</a></li>
-                        <li class="bodyList"><a href="#">jQuery</a></li>
-                        <li class="bodyList"><a href="#">JavaScript</a></li>
+                        <li class="title"><a href="#"><h2>How to Use jQuery in Rails 5.1+ with Yarn and Webpack</h2></a></li>
+                        <li class="bodyList"><a href="#"><h3>Ruby on Rails</h3></a></li>
+                        <li class="bodyList"><a href="#"><h3>Coding</h3></a></li>
+                        <li class="bodyList"><a href="#"><h3>Tutorial</h3></a></li>
+                        <li class="bodyList"><a href="#"><h3>jQuery</h3></a></li>
+                        <li class="bodyList"><a href="#"><h3>JavaScript</h3></a></li>
                     </ul>
                 </div>
             </div>
@@ -170,8 +231,8 @@
                 <img src="https://dailysmarty-production.s3.amazonaws.com/uploads/post/img/451/Heroku.png" alt="" class="img1">
                 <div class="list9">
                     <ul>
-                        <li class="title"><a href="#">How to Create Staging and Production Environments on Heroku</a></li>
-                        <li class="bodyList"><a href="#">Heroku</a></li>
+                        <li class="title"><a href="#"><h2>How to Create Staging and Production Environments on Heroku</h2></a></li>
+                        <li class="bodyList"><a href="#"><h3>Heroku</h3></a></li>
                     </ul>
                 </div>
             </div>
@@ -180,12 +241,12 @@
                 <img src="https://dailysmarty-production.s3.amazonaws.com/uploads/post/img/431/Screen_Shot_2018-02-06_at_1.28.36_PM.png" alt="" class="img1 imgbottom">
                 <div class="list10">
                     <ul>
-                        <li class="title"><a href="#">Quill, Your powerful rich text editor.</a></li>
-                        <li class="bodyList"><a href="#">Sass</a></li>
-                        <li class="bodyList"><a href="#">CSS</a></li>
-                        <li class="bodyList"><a href="#">Markdown</a></li>
-                        <li class="bodyList"><a href="#">scss</a></li>
-                        <li class="bodyList"><a href="#">Front End Development</a></li>
+                        <li class="title"><a href="#"><h2>Quill, Your powerful rich text editor.</h2></a></li>
+                        <li class="bodyList"><a href="#"><h3>Sass</h3></a></li>
+                        <li class="bodyList"><a href="#"><h3>CSS</h3></a></li>
+                        <li class="bodyList"><a href="#"><h3>Markdown</h3></a></li>
+                        <li class="bodyList"><a href="#"><h3>scss</h3></a></li>
+                        <li class="bodyList"><a href="#"><h3>Front End Development</h3></a></li>
                     </ul>
                 </div>
             </div>
